@@ -52,8 +52,9 @@ To use the project locally:
 # Credits
 Developed by Vaishnavi.
 
-GitHub: @Vysh0d
+GitHub : [vaishnavi](https://github.com/vysh0d)
 
+LinkedIn : [Vaishnavi Dupparaju](https://www.linkedin.com/in/vaishnavi-dupparaju-851903339/)
 
 
 
