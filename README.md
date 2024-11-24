@@ -13,6 +13,8 @@ This project is a simple yet powerful calculator built using HTML, CSS, and Java
   * Input and evaluate mathematical expressions with brackets ().
 * Input is restricted to button clicks only for better usability.
 * Clear the display option.
+* Light and dark themes.
+* visually appealing UI.
 * Responsive design for desktop and mobile.
 
 #  How to Use
