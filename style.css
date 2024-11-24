@@ -1,0 +1,115 @@
+:root {
+    /* Light theme colors */
+    --background: linear-gradient(135deg, #f3ec78, #af4261); /* Light gradient */
+    --calc-bg: rgba(235, 189, 189, 0.8); /* Light glassmorphism */
+    --button-bg: linear-gradient(145deg, #ffd700, #ff8c00); /* Light button gradient */
+    --button-hover: linear-gradient(145deg, #ff7b00, #ffbf00);
+    --text-color: #1a202c; /* Dark text on light background */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--background);
+    margin: 0;
+    color: var(--text-color);
+    transition: all 0.5s ease; /* Smooth theme transition */
+}
+
+.calculator {
+    background: var(--calc-bg);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    padding: 20px;
+    width: 320px;
+    text-align: center;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#display:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    background: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    font-size: 18px;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 25px rgba(255, 255, 255, 0.4);
+        transform: scale(1.1); /* Enlarges slightly */
+        transition: all 0.3s ease;
+    
+}
+
+button:active {
+    transform: scale(0.95);
+    background: var(--button-bg);
+}
+
+/* Dark theme colors */
+body.dark-theme {
+    --background: linear-gradient(135deg, #1e293b, #0f172a); /* Dark gradient */
+    --calc-bg: rgba(255, 255, 255, 0.1); /* Dark glassmorphism */
+    --button-bg: linear-gradient(145deg, #485563, #1e293b); /* Dark button gradient */
+    --button-hover: linear-gradient(145deg, #728aa1, #2a3d52);
+    --text-color: #fff; /* Light text on dark background */
+}
+
+.theme-toggle {
+    margin-bottom: 20px;
+}
+
+.theme-toggle button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle button:hover {
+    background: var(--button-hover);
+}
